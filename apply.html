@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Form</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+  
+      <link rel="stylesheet" href="css/style.css">
+          <link rel="stylesheet" href="onepage-scroll.css">
+<!-- find a better font -->
+  
+</head>
+<body>
+      <font color="white"> 
+          <h1 style="text-align: center; font-family: 'Open Sans', sans-serif;"> <br> MycroChange Impact Nomination Form </h1> </font>
+  <!--   <h2 style="text-align: center">
+
+        We believe in a better tomorrow <br>
+       Tell us your favorite nonprofits and impact-oriented businesses!</h2></font>  -->
+  
+<form style="font-family: 'Open Sans', sans-serif;" action="https://formspree.io/mycrochange@gmail.com"
+      method="POST">
+  <input name="name" id="input-1" type="text" placeholder="Jane Doe" required />
+  <label for="input-1">
+    <span class="label-text">Hi! What's your full Name</span>
+    <span class="nav-dot"></span>
+      <div class="signup-button-trigger">Nominate!</div>
+       
+  </label>
+  <input name="organization" id="input-2" type="text" placeholder="Impact Inc" required />
+  <label for="input-2">
+    <span class="label-text">Thanks! What's your organization's name?</span>
+    <span class="nav-dot"></span>
+  </label>
+  <input name="description" id="input-3" type="paragraph" placeholder="This organization does super cool stuff!" required />
+  <label for="input-3">
+    <span class="label-text">Give us the details! What does this organization do in 50 words or less?</span>
+    <span class="nav-dot"></span>
+  </label>
+  <input name="links" id="input-4" type="paragraph" placeholder="https://website.org" required />
+  <label for="input-4">
+    <span class="label-text">Any additional links to share about this organization, i.e. website, a YouTube Video, PDF uploaded to Google drive, anything!</span>
+    <span class="nav-dot"></span>
+  </label>
+  
+  <input name="email" id="input-5" type="email" placeholder="jane@impactinc.org" required />
+  <label for="input-5">
+    <span class="label-text">Thanks for all your help! What email should we reach out to for more details?</span>
+    <span class="nav-dot"></span>
+  </label>
+  <input id="input-6" type="submit" value="send" value="Submit!"/>
+  <p class="tip">Press Enter/Tab To Proceed</p>
+  <div class="signup-button">Nominate Today!</div>
+    <input type="text" name="_replyto" placeholder="Your email" />
+    <input type="hidden" name="_subject" value="Your MycroChange submission!" />
+    <input type="hidden" name="_next" value="https://mycrochange.org" />
+</form>
+  
+    <script  src="js/index.js"></script>
+
+</body>
+</html>
