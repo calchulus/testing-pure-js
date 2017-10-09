@@ -1,1 +1,0 @@
-# testing-pure-js
