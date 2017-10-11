@@ -1,11 +1,107 @@
+body, html {
+  margin: 0;
+  overflow: hidden;
+  -webkit-transition: opacity 400ms;
+  -moz-transition: opacity 400ms;
+  transition: opacity 400ms;
+}
+
+body, .onepage-wrapper, html {
+  display: block;
+  position: static;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.onepage-wrapper {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  padding: 0;
+  -webkit-transform-style: preserve-3d;
+}
+
+.onepage-wrapper .ops-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.onepage-pagination {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  z-index: 5;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.onepage-pagination li {
+  padding: 0;
+  text-align: center;
+}
+.onepage-pagination li a{
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+  
+}
+.onepage-pagination li a:before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(0,0,0,0.85);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.onepage-pagination li a.active:before{
+  width: 10px;
+  height: 10px;
+  background: none;
+  border: 1px solid black;
+  margin-top: -4px;
+  left: 8px;
+}
+
+.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
+  overflow: auto;
+}
+
+.disabled-onepage-scroll .onepage-wrapper .ops-section {
+  position: relative !important;
+  top: auto !important;
+}
+.disabled-onepage-scroll .onepage-wrapper {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  transform: none !important;
+  -ms-transform: none !important;
+  min-height: 100%;
+}
+
+
+.disabled-onepage-scroll .onepage-pagination {
+  display: none;
+}
+
+body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
+  position: inherit;
+}
+
 html {
       height: 100%;
     }
     body {
-      background: #44444;
+      background: #444444;
       padding: 0;
       text-align: center;
-      font-family: 'open sans';
+      font-family: 'Montserrat', sans-serif;
       position: relative;
       margin: 0;
       height: 100%;
@@ -32,8 +128,8 @@ html {
       margin-top: 100px;
       color: #000;
       margin-bottom: 5px;
-      font-size: 70px;
-      letter-spacing: -4px;
+      font-size: 110px;
+      letter-spacing: 0px;
       font-weight: 100;
     }
     h1 span {
@@ -94,6 +190,7 @@ html {
     }
     
     .main h1 {
+      margin-top: 200px;
       padding:150px 50px;
       float: left;
       width: 100%;
@@ -128,30 +225,29 @@ html {
     
     .reload, .btn{
       display: inline-block;
-      border: 4px solid #A2261E;
-      border-radius: 5px;
+      border: 4px solid #0090ff;
+      border-radius: 4px;
       -moz-border-radius: 5px;
       -webkit-border-radius: 5px;
-      background: #CC3126;
+      background: #444;
       display: inline-block;
       line-height: 100%;
-      padding: 0.7em;
+      padding: 0.8em;
       text-decoration: none;
       color: #fff;
       width: 100px;
-      line-height: 140%;
-      font-size: 17px;
-      font-family: open sans;
+      line-height: 70%;
+      font-size: 18px;
+      font-family: "Montserrat", sans-serif;
       font-weight: bold;
     }
     .reload:hover{
-      background: #444;
+      background: #0090ff;
     }
     .btn {
       width: 200px;
-      color: rgb(255, 255, 255);
-      border: 4px solid rgb(0, 0, 0);
-      background: rgba(3, 3, 3, 0.75);
+      color: #ffffff;
+      background: #0090ff;
     }
     .clear {
       width: auto;
@@ -187,15 +283,15 @@ html {
       left: 0;
       text-align: center;
       display: block;
-      padding: 7px;
+      padding: 10px;
       width: 100%;
       box-sizing: border-box;
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.25);
+      background: #0090ff;
       font-weight: bold;
-      font-size: 13px;
-      color: #000;
+      font-size: 15px;
+      color: #fff;
       -webkit-transition: all 500ms ease-in-out;
       -moz-transition: all 500ms ease-in-out;
       -o-transition: all 500ms ease-in-out;
@@ -211,7 +307,7 @@ html {
       z-index: 10;
     }
     .main section .page_container {
-      position: relative;
+      position: center;
       top: 25%;
       margin: 0 auto 0;
       max-width: 950px;
@@ -228,24 +324,28 @@ html {
     }
     
     .main section.page1 {
-      background:rgb(230, 217, 200);
+      background:#444;
     }
     .main section.page1 h1 {
       float: none;
-      width: 435px;
+      width: 100%;
       display: block;
       text-align: center;
       padding: 0;
+      vertical-align: center;
+        margin-top: 33vh;
       margin-bottom: 15px;
-      font-size: 44px;
-      color: black;
+      font-size: 64px;
+      color: white;
+    
     }
     .main section.page1 h2 {
-      font-size: 18px;
+      font-size: 28px;
       display: block;
-      color: rgba(0,0,0,0.85);
+      color: white;
+      font-weight: 250; 
       text-align: center;
-      width: 435px;
+      width: 100%;
       line-height: 160%;
     }
     .main section .page_container .btns {
@@ -258,7 +358,7 @@ html {
       text-align: center;
     }
     .main section.page2 {
-      background: #555557 no-repeat center -150px ;
+      background: #555557 url(back-phone.png) no-repeat center -150px ;
     }
     .main section.page2 > img {
       position: absolute;
@@ -285,11 +385,11 @@ html {
       font-weight: 100;
     }
     .viewing-page-2 .back{
-      background: rgba(0, 0, 0, 0.25);
+      background: #0090ff;
       color: #FFF;
       }
     .main section.page3 {
-      background:url(tilted-phone.png) no-repeat 156px -150px ;
+      background: no-repeat 156px -150px ;
     }
     .main section.page3 .page_container {
       overflow: hidden;
